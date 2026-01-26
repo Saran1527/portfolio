@@ -50,8 +50,8 @@ const AboutSection: React.FC = () => {
               </div>
               <div className="absolute -bottom-5 -right-5 w-24 h-24 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg">
                 <p className="text-white text-center">
-                  <span className="block text-2xl font-bold">8+</span>
-                  <span className="text-sm">Month Exp.</span>
+                  <span className="block text-2xl font-bold">1+</span>
+                  <span className="text-sm">Year Exp.</span>
                 </p>
               </div>
             </div>
@@ -80,7 +80,7 @@ const AboutSection: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <Briefcase className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
-                <span className="text-gray-700 dark:text-gray-300">8 Month In Acsass</span>
+                <span className="text-gray-700 dark:text-gray-300">1+ Year In Acsass</span>
               </div>
               <div className="flex items-center">
                 <GraduationCap className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
@@ -108,5 +108,6 @@ const AboutSection: React.FC = () => {
     </section>
   );
 };
+
 
 export default AboutSection;
