@@ -62,24 +62,6 @@ const ProjectsSection: React.FC = () => {
             and technologies in my development arsenal.
           </p>
         </div>
-{/* 
-        <div className="flex justify-center mb-8 animate-on-scroll opacity-0">
-          <div className="flex flex-wrap gap-2 md:gap-4">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveFilter(category)}
-                className={`px-4 py-2 rounded-full capitalize transition-all duration-300 ${
-                  activeFilter === category
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div> */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {visibleProjects.length === 0 ? (
@@ -93,7 +75,7 @@ const ProjectsSection: React.FC = () => {
                 className="flex flex-col animate-on-scroll opacity-0 bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="relative group h-48 overflow-hidden">
+                <div className="relative group h-56 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -149,7 +131,7 @@ const ProjectsSection: React.FC = () => {
                     <span className="text-sm text-gray-500 dark:text-gray-400 capitalize">
                       {project.category}
                     </span>
-                    <a
+                    {/* <a
                       href={project.demo || project.github}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -157,7 +139,7 @@ const ProjectsSection: React.FC = () => {
                     >
                       Learn more
                       <ExternalLink className="h-3 w-3" />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
