@@ -294,7 +294,7 @@ const HeroSection: React.FC = () => {
               Full Stack Developer
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-xl animate-slideInLeft animation-delay-700">
-              I build exceptional full-stack applications using Python (Django/Flask) and deliver scalable solutions with the MERN stack (MongoDB, Express, React, Node.js). From frontend to backend, I transform your ideas into powerful, production-ready products.
+              I build exceptional full-stack applications using Python (Django/FastAPI) and deliver scalable solutions with the MERN stack (MongoDB, Express, React, Node.js). From frontend to backend, I transform your ideas into powerful, production-ready products.
             </p>
 
             <div className="flex flex-wrap gap-4 animate-slideInLeft animation-delay-900">
