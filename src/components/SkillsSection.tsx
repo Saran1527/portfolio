@@ -9,43 +9,47 @@ interface Skill {
 const SkillsSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
- const skills: Skill[] = [
-  // Frontend
-  { name: "React.js", level: 95, category: "Front-End Skills" },
-  { name: "Bootstrap", level: 90, category: "Front-End Skills" },
-  { name: "Material-UI", level: 91, category: "Front-End Skills" },
-  { name: "HTML/CSS", level: 90, category: "Front-End Skills" },
-  { name: "Tailwind CSS", level: 88, category: "Front-End Skills" },
+  const skills: Skill[] = [
+    // Frontend Development
+    { name: "React.js", level: 95, category: "Front-End Development" },
+    { name: "Redux / Redux Toolkit", level: 85, category: "Front-End Development" },
+    { name: "Material-UI (MUI)", level: 90, category: "Front-End Development" },
+    { name: "Tailwind CSS", level: 88, category: "Front-End Development" },
+    { name: "HTML5", level: 92, category: "Front-End Development" },
+    { name: "CSS3", level: 90, category: "Front-End Development" },
+    { name: "Responsive Web Design", level: 90, category: "Front-End Development" },
+    { name: "JavaScript (ES6+)", level: 92, category: "Front-End Development" },
+    { name: "TypeScript", level: 82, category: "Front-End Development" },
 
-  // Core Technologies
-  { name: "JavaScript", level: 90, category: "Core Technologies" },
-  { name: "TypeScript", level: 80, category: "Core Technologies" },
-  { name: "Redux", level: 90, category: "Core Technologies" },
-  { name: "RESTful APIs", level: 85, category: "Core Technologies" },
+    // Backend Development
+    { name: "Python", level: 90, category: "Back-End Development" },
+    { name: "Django", level: 90, category: "Back-End Development" },
+    { name: "Node.js", level: 85, category: "Back-End Development" },
+    { name: "Express.js", level: 85, category: "Back-End Development" },
+    { name: "FastAPI", level: 78, category: "Back-End Development" },
+    { name: "RESTful API Development", level: 90, category: "Back-End Development" },
+    { name: "Authentication (JWT, OAuth)", level: 85, category: "Back-End Development" },
 
-  // Backend
-  { name: "Node.js", level: 90, category: "Back-End Skills" },
-  { name: "Express.js", level: 90, category: "Back-End Skills" },
-  { name: "MongoDB", level: 90, category: "Back-End Skills" },
-  { name: "MySQL", level: 88, category: "Back-End Skills" },
-  { name: "SQLLite", level: 88, category: "Back-End Skills" },
-  { name: "Python", level: 85, category: "Back-End Skills" },
-  { name: "Django", level: 80, category: "Back-End Skills" },
-  { name: "Flask", level: 75, category: "Back-End Skills" },
+    // Database Management
+    { name: "MongoDB", level: 90, category: "Database" },
+    { name: "MySQL", level: 88, category: "Database" },
+    { name: "PostgreSQL", level: 88, category: "Database" },
+    { name: "SQLite", level: 85, category: "Database" },
+    { name: "Database Design & Query Optimization", level: 82, category: "Database" },
 
-  // DevOps / Tools
-  { name: "Git & GitHub", level: 85, category: "Other Relevant Skills" },
-  { name: "Firebase", level: 75, category: "Other Relevant Skills" },
-  { name: "Docker", level: 70, category: "Other Relevant Skills" },
-  { name: "CI/CD Pipelines", level: 70, category: "Other Relevant Skills" },
+    // DevOps & Deployment
+    { name: "Docker", level: 72, category: "DevOps & Deployment" },
+    { name: "CI/CD Pipelines", level: 75, category: "DevOps & Deployment" },
+    { name: "Git", level: 90, category: "DevOps & Deployment" },
+    { name: "GitHub", level: 90, category: "DevOps & Deployment" },
 
-  // Additional
-  { name: "Push Notifications", level: 70, category: "Other Relevant Skills" },
-  { name: "Performance Optimization", level: 80, category: "Other Relevant Skills" },
-  { name: "Authentication & Security (JWT, OAuth)", level: 85, category: "Other Relevant Skills" },
-  { name: "Agile & Scrum Practices", level: 75, category: "Other Relevant Skills" },
-];
-
+    // Tools & Development Practices
+    { name: "Postman (API Testing)", level: 95, category: "Tools & Practices" },
+    { name: "Swagger / OpenAPI", level: 80, category: "Tools & Practices" },
+    { name: "Performance Optimization", level: 82, category: "Tools & Practices" },
+    { name: "Agile & Scrum Methodologies", level: 80, category: "Tools & Practices" },
+    { name: "Debugging & Problem Solving", level: 90, category: "Tools & Practices" },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -57,9 +61,8 @@ const SkillsSection: React.FC = () => {
             const progressBars = entry.target.querySelectorAll(".progress-bar");
             progressBars.forEach((bar, index) => {
               setTimeout(() => {
-                (bar as HTMLElement).style.width = `${
-                  (bar as HTMLElement).dataset.width
-                }%`;
+                (bar as HTMLElement).style.width = `${(bar as HTMLElement).dataset.width
+                  }%`;
               }, 100 * index);
             });
           }
@@ -78,10 +81,11 @@ const SkillsSection: React.FC = () => {
   }, []);
 
   const categories = [
-    { id: "Core Technologies", name: "Core Technologies" },
-    { id: "Front-End Skills", name: "Front-End Skills" },
-    { id: "Back-End Skills", name: "Back-End Skills" },
-    { id: "Other Relevant Skills", name: "Other Relevant Skills" },
+    { id: "Front-End Development", name: "Front-End Development" },
+    { id: "Back-End Development", name: "Back-End Development" },
+    { id: "Database", name: "Database" },
+    { id: "DevOps & Deployment", name: "DevOps & Deployment" },
+    { id: "Tools & Practices", name: "Tools & Practices" },
   ];
 
   return (
@@ -97,7 +101,7 @@ const SkillsSection: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
           <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-          I specialize in Full Stack Development with expertise in the MERN stack (MongoDB, Express, React, Node.js) and Python frameworks (Django/Flask), building scalable applications from frontend to backend.
+            I specialize in Full Stack Development with expertise in the MERN stack (MongoDB, Express, React, Node.js) and Python frameworks (Django/Flask), building scalable applications from frontend to backend.
 
           </p>
         </div>
